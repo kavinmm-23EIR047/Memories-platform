@@ -5,7 +5,7 @@ const router = express.Router();
 
 const FEEDBACK_FILE = "feedbacks.json";
 
-// ✅ Helper: Load feedbacks safely
+// ✅ Load Feedbacks
 function loadFeedbacks() {
   try {
     if (!fs.existsSync(FEEDBACK_FILE)) {
@@ -14,19 +14,14 @@ function loadFeedbacks() {
     }
 
     const data = fs.readFileSync(FEEDBACK_FILE, "utf8").trim();
-    if (data === "") {
-      fs.writeFileSync(FEEDBACK_FILE, "[]", "utf8");
-      return [];
-    }
-
-    return JSON.parse(data);
+    return data ? JSON.parse(data) : [];
   } catch (err) {
     console.error("Error loading feedbacks:", err.message);
     return [];
   }
 }
 
-// ✅ Helper: Save feedbacks safely
+// ✅ Save Feedbacks
 function saveFeedbacks(feedbacks) {
   try {
     fs.writeFileSync(FEEDBACK_FILE, JSON.stringify(feedbacks, null, 2), "utf8");
@@ -57,31 +52,39 @@ router.post("/feedback", async (req, res) => {
 
   res.status(200).json({ success: true, message: "Feedback received" });
 
-  // ✅ Send email notification (Optional)
+  // ✅ Send Email Notification
   const { EMAIL_USER, EMAIL_PASS, EMAIL_TO } = process.env;
   if (EMAIL_USER && EMAIL_PASS && EMAIL_TO) {
-    try {
-      const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: EMAIL_USER,
-          pass: EMAIL_PASS,
-        },
-      });
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: EMAIL_USER,
+        pass: EMAIL_PASS,
+      },
+    });
 
-      await transporter.sendMail({
-        from: EMAIL_USER,
-        to: EMAIL_TO,
-        subject: "📝 New Feedback Received",
-        html: `<h4>${name} (${email})</h4><p>${comment}</p>`,
-      });
-    } catch (err) {
-      console.error("Failed to send feedback email:", err);
-    }
+    transporter.verify((error, success) => {
+      if (error) {
+        console.error("❌ Email server verification failed:", error);
+      } else {
+        transporter.sendMail({
+          from: `"Feedback Notifier" <${EMAIL_USER}>`,
+          to: EMAIL_TO,
+          subject: "📝 New Feedback Received",
+          html: `<h4>${name} (${email})</h4><p>${comment}</p>`,
+        }).then(() => {
+          console.log("✅ Feedback email sent");
+        }).catch((err) => {
+          console.error("❌ Failed to send feedback email:", err);
+        });
+      }
+    });
   }
 });
 
-// ✅ GET /api/feedbacks - Fetch all feedbacks
+// ✅ GET /api/feedbacks - Fetch All
 router.get("/feedbacks", (req, res) => {
   try {
     const feedbacks = loadFeedbacks();
@@ -92,7 +95,7 @@ router.get("/feedbacks", (req, res) => {
   }
 });
 
-// ✅ PATCH /api/feedback/star/:id - Add star
+// ✅ PATCH /api/feedback/star/:id - Add Star
 router.patch("/feedback/star/:id", (req, res) => {
   const feedbackId = req.params.id;
 
