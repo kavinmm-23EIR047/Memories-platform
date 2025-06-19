@@ -50,7 +50,7 @@ router.post("/feedback", async (req, res) => {
     return res.status(500).json({ error: "Failed to save feedback" });
   }
 
-  res.status(200).json({ success: true, message: "Feedback received" });
+  res.status(200).json({ success: true, message: "Thanks for your feedback" });
 
   // ✅ Send Email Notification
   const { EMAIL_USER, EMAIL_PASS, EMAIL_TO } = process.env;
