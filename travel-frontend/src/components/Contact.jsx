@@ -3,28 +3,17 @@ import { useEffect, useState } from "react";
 const Contact = () => {
   const [form, setForm] = useState({
     name: "",
+    people: "",
+    days: "",
+    pickup: "",
+    destination: "",
     email: "",
     contact: "",
-    buslist: "",
-    need: "",
   });
 
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
-
-  const busOptions = [
-    "RKG",
-    "Sabari",
-    "NPS",
-    "Murugan",
-    "Chandru",
-    "Mano",
-    "Traveller",
-    "Senthur",
-    "Jai Sri",
-    "Pettakarran",
-  ];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -58,7 +47,15 @@ const Contact = () => {
 
       const data = await res.json();
       if (data.success) {
-        setForm({ name: "", email: "", contact: "", buslist: "", need: "" });
+        setForm({
+          name: "",
+          people: "",
+          days: "",
+          pickup: "",
+          destination: "",
+          email: "",
+          contact: "",
+        });
         setStatus(true);
       } else {
         setStatus(false);
@@ -78,17 +75,57 @@ const Contact = () => {
         name="name"
         value={form.name}
         onChange={handleChange}
-        placeholder="Your Name"
+        placeholder="Name"
         required
         className="w-full p-3 border rounded-md"
         disabled={loading}
       />
       <input
+        type="number"
+        name="people"
+        value={form.people}
+        onChange={handleChange}
+        placeholder="No of People"
+        required
+        className="w-full p-3 border rounded-md"
+        disabled={loading}
+      />
+      <input
+        type="number"
+        name="days"
+        value={form.days}
+        onChange={handleChange}
+        placeholder="No of Days"
+        required
+        className="w-full p-3 border rounded-md"
+        disabled={loading}
+      />
+      <input
+        type="text"
+        name="pickup"
+        value={form.pickup}
+        onChange={handleChange}
+        placeholder="Pickup Point"
+        required
+        className="w-full p-3 border rounded-md"
+        disabled={loading}
+      />
+      <textarea
+        name="destination"
+        value={form.destination}
+        onChange={handleChange}
+        placeholder="Travel Destination Places"
+        required
+        rows={3}
+        className="w-full p-3 border rounded-md"
+        disabled={loading}
+      ></textarea>
+      <input
         type="email"
         name="email"
         value={form.email}
         onChange={handleChange}
-        placeholder="Your Email"
+        placeholder="Email"
         required
         className="w-full p-3 border rounded-md"
         disabled={loading}
@@ -103,31 +140,6 @@ const Contact = () => {
         className="w-full p-3 border rounded-md"
         disabled={loading}
       />
-      <select
-        name="buslist"
-        value={form.buslist}
-        onChange={handleChange}
-        required
-        className="w-full p-3 border rounded-md"
-        disabled={loading}
-      >
-        <option value="">Select Bus</option>
-        {busOptions.map((bus) => (
-          <option key={bus} value={bus}>
-            {bus}
-          </option>
-        ))}
-      </select>
-      <textarea
-        name="need"
-        value={form.need}
-        onChange={handleChange}
-        placeholder="Describe your need"
-        required
-        rows={4}
-        className="w-full p-3 border rounded-md"
-        disabled={loading}
-      ></textarea>
 
       <button
         type="submit"
@@ -138,18 +150,13 @@ const Contact = () => {
       </button>
 
       {status === true && (
-        <>
-          <p className="text-green-600 text-center mt-2 font-semibold animate-pulse">
-            ✅ Registered successfully!
-          </p>
-          <p className="text-center text-sm text-blue-600">
-            🎉 Thanks for contacting us about <strong>{form.buslist}</strong>. We'll reach out soon!
-          </p>
-        </>
+        <p className="text-green-600 text-center mt-2 font-semibold animate-pulse">
+          ✅ Registered successfully! We'll get back to you shortly.
+        </p>
       )}
       {status === false && (
         <p className="text-red-600 text-center mt-2 font-medium">
-          ❌ Submission failed. Please check details and try again.
+          ❌ Submission failed. Please check the form and try again.
         </p>
       )}
     </>
@@ -158,31 +165,35 @@ const Contact = () => {
   return (
     <>
       <section className="py-12 px-4 md:px-10 bg-white">
-        <div className="max-w-xl mx-auto bg-gray-100 p-8 rounded-xl shadow-md border border-yellow-300">
-          <h2 className="text-3xl font-bold text-center mb-6 text-yellow-500">
-            Contact Us
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {renderFormFields()}
-          </form>
+        <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-[#fceabb] via-[#f8b500] to-[#ffdd95] shadow-md hover:shadow-xl transition duration-300 max-w-xl mx-auto">
+          <div className="bg-[#fffdf7] rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-center mb-6 text-yellow-600 font-mui">
+              Contact Us
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-4 font-cui font-bold">
+              {renderFormFields()}
+            </form>
+          </div>
         </div>
       </section>
 
       {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
-          <div className="bg-white p-8 rounded-xl max-w-xl w-full shadow-2xl border border-yellow-400 relative">
-            <button
-              onClick={() => setShowPopup(false)}
-              className="absolute top-2 right-4 text-gray-600 text-xl"
-            >
-              ✕
-            </button>
-            <h3 className="text-2xl font-bold text-center mb-4 text-yellow-600">
-              Quick Contact
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {renderFormFields()}
-            </form>
+          <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-[#fceabb] via-[#f8b500] to-[#ffdd95] shadow-2xl w-[90%] max-w-md sm:max-w-lg md:max-w-xl">
+            <div className="bg-[#fffdf7] rounded-2xl p-8">
+              <button
+                onClick={() => setShowPopup(false)}
+                className="absolute top-2 right-4 text-gray-600 text-xl"
+              >
+                ✕
+              </button>
+              <h3 className="text-2xl font-bold text-center mb-4 text-yellow-600 font-mui">
+                Quick Contact
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-4 font-cui font-bold">
+                {renderFormFields()}
+              </form>
+            </div>
           </div>
         </div>
       )}

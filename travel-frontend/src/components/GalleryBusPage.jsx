@@ -75,10 +75,7 @@ import img49 from "../assets/gallery/bus9/9b9.jpeg";
 import img50 from "../assets/gallery/bus9/9b10.jpeg";
 
 
-import img51 from "../assets/gallery/bus5/5b1.jpeg";
-import img52 from "../assets/gallery/bus5/5b2.jpeg";
-import img53 from "../assets/gallery/bus5/5b3.jpeg";
-import img54 from "../assets/gallery/bus5/5b4.jpeg";
+
 
 import img71 from "../assets/gallery/bus7/7b1.jpeg";
 import img72 from "../assets/gallery/bus7/7b2.jpeg";
@@ -153,11 +150,11 @@ const busData = {
     images: [img91, img92, img93, img94, img95, img96, img97, img98],
     video: bus4Video,
   },
-  bus5: {
-    name: "Chandru",
-    images: [img51, img52, img53, img54],
-    // video: bus5Video,
-  },
+  // bus5: {
+  //   name: "Chandru",
+  //   images: [img51, img52, img53, img54],
+  //   // video: bus5Video,
+  // },
   bus6: {
     name: "Mano",
     images: [img61, img62, img63, img64, img65, img66, img67, img68],
@@ -217,75 +214,76 @@ const GalleryBusPage = () => {
   }
 
   return (
-    <section className="py-16 px-6 md:px-12 bg-gray-100">
-      <div className="max-w-6xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-2xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-indigo-700 text-center mb-10">
-          {bus.name}
-        </h2>
+   <section className="pt-32 pb-16 px-6 md:px-12 bg-gray-100 scroll-mt-32">
+  <div className="max-w-6xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-2xl">
+    <h2 className="text-4xl md:text-5xl font-bold text-[#facc15] text-center mb-10 font-mui">
+      {bus.name}
+    </h2>
 
-        {/* 🖼 Image Swiper with Autoplay */}
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          modules={[Navigation, Pagination, Autoplay]}
-          className="mb-12"
-        >
-          {bus.images.map((img, idx) => (
-            <SwiperSlide key={idx}>
-              <div
-                onClick={() => setSelectedImage(img)}
-                className="overflow-hidden cursor-pointer"
-              >
-                <img
-                  src={img}
-                  alt={`Bus ${idx + 1}`}
-                  className="w-full h-[500px] object-cover rounded-xl transform hover:scale-105 transition duration-300 ease-in-out"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        {/* 🎥 Video Section */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-            Bus Tour Video:
-          </h3>
-
-          <div className="w-[640px] max-w-full mx-auto">
-            <video
-              src={bus.video}
-              controls
-              className="w-full h-auto rounded-xl shadow-lg"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* 🖼 Full Image Modal */}
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-          <div className="relative">
-            <div className="absolute top-2 right-2 bg-white/80 backdrop-blur-md rounded-full p-2 shadow-md">
-              <button
-                className="text-red-600 text-2xl font-bold leading-none"
-                onClick={() => setSelectedImage(null)}
-              >
-                ✖
-              </button>
-            </div>
+    {/* 🖼 Image Swiper with Autoplay */}
+    <Swiper
+      spaceBetween={30}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      modules={[Navigation, Pagination, Autoplay]}
+      className="mb-12"
+    >
+      {bus.images.map((img, idx) => (
+        <SwiperSlide key={idx}>
+          <div
+            onClick={() => setSelectedImage(img)}
+            className="overflow-hidden cursor-pointer"
+          >
             <img
-              src={selectedImage}
-              alt="Full view"
-              className="max-w-full max-h-[90vh] rounded-lg shadow-lg cursor-zoom-out"
+              src={img}
+              alt={`Bus ${idx + 1}`}
+              className="w-full h-[500px] object-cover rounded-xl transform hover:scale-105 transition duration-300 ease-in-out font-mui"
             />
           </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+
+    {/* 🎥 Video Section */}
+    <div className="mt-12">
+      <h3 className="text-3xl font-semibold text-gray-800 mb-6 font-mui text-center">
+        Bus Video:
+      </h3>
+
+      <div className="w-[640px] max-w-full mx-auto">
+        <video
+          src={bus.video}
+          controls
+          className="w-full h-auto rounded-xl shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+
+  {/* 🖼 Full Image Modal */}
+  {selectedImage && (
+    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+      <div className="relative">
+        <div className="absolute top-2 right-2 bg-white/80 backdrop-blur-md rounded-full p-2 shadow-md">
+          <button
+            className="text-[#facc15] text-2xl font-bold leading-none"
+            onClick={() => setSelectedImage(null)}
+          >
+            ✖
+          </button>
         </div>
-      )}
-    </section>
+        <img
+          src={selectedImage}
+          alt="Full view"
+          className="max-w-full max-h-[90vh] rounded-lg shadow-lg cursor-zoom-out"
+        />
+      </div>
+    </div>
+  )}
+</section>
+
   );
 };
 

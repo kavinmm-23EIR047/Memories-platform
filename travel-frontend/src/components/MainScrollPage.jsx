@@ -46,48 +46,49 @@ const MainScrollPage = () => {
       {/* Scroll Arrows */}
       <div className="fixed bottom-5 right-5 flex flex-col gap-3 z-50">
         {currentSection > 0 && (
-          <button
-            onClick={() => scrollTo(currentSection - 1)}
-            className="bg-white border-4 border-yellow-400 text-yellow-400 w-14 h-14 rounded-full flex items-center justify-center text-[32px] font-extrabold animate-glow-yellow shadow-lg transition"
-            title="Scroll Up"
-          >
-            ↑
-          </button>
+         <button
+  onClick={() => scrollTo(currentSection - 1)}
+  className="bg-white border-4 border-yellow-400 text-yellow-400 w-14 h-14 sm:w-10 sm:h-10 text-[32px] sm:text-[24px] rounded-full flex items-center justify-center font-extrabold animate-glow-yellow shadow-lg transition"
+  title="Scroll Up"
+>
+  ↑
+</button>
         )}
 
         {currentSection < sectionsRef.current.length - 1 && (
-          <button
-            onClick={() => scrollTo(currentSection + 1)}
-            className="bg-white border-4 border-yellow-400 text-yellow-400 w-14 h-14 rounded-full flex items-center justify-center text-[32px] font-extrabold animate-glow-yellow shadow-lg transition"
-            title="Scroll Down"
-          >
-            ↓
-          </button>
+         <button
+  onClick={() => scrollTo(currentSection + 1)}
+  className="bg-white border-4 border-yellow-400 text-yellow-400 w-14 h-14 sm:w-10 sm:h-10 text-[32px] sm:text-[24px] rounded-full flex items-center justify-center font-extrabold animate-glow-yellow shadow-lg transition"
+  title="Scroll Down"
+>
+  ↓
+</button>
         )}
       </div>
 
-      {/* 👉 Enquiry Now Button */}
-  <button
+      {/* 👉 Enquiry Now Button
+ <button
   onClick={() => setIsEnquiryOpen(true)}
-  className="fixed top-1/2 right-5 transform -translate-y-1/2 rotate-90 origin-right bg-yellow-400 text-white font-bold py-2 px-4 rounded-l-xl shadow-lg z-[9999] animate-glow-yellow hover:bg-yellow-500"
+  className="fixed top-1/2 right-2 transform -translate-y-1/2 rotate-90 origin-right bg-yellow-400 text-white font-bold py-2 px-3 sm:py-1 sm:px-2 text-base sm:text-sm rounded-l-xl shadow-lg z-[9999] animate-glow-yellow hover:bg-yellow-500"
 >
   Enquiry Now
-</button>
+</button> */}
 
       {/* ✨ Modal Popup */}
-      {isEnquiryOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl p-6 shadow-2xl max-w-2xl w-full relative animate-fade-in">
-            <button
-              className="absolute top-3 right-3 text-xl font-bold text-gray-500 hover:text-red-500"
-              onClick={() => setIsEnquiryOpen(false)}
-            >
-              ×
-            </button>
-            <Contact />
-          </div>
-        </div>
-      )}
+    {isEnquiryOpen && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white rounded-xl p-4 md:p-6 shadow-2xl w-[90%] sm:w-[80%] md:max-w-xl relative animate-fade-in max-h-[90vh] overflow-y-auto">
+      <button
+        className="absolute top-2 right-2 text-lg font-bold text-gray-500 hover:text-red-500"
+        onClick={() => setIsEnquiryOpen(false)}
+      >
+        ×
+      </button>
+      <Contact />
+    </div>
+  </div>
+)}
+
     </div>
   );
 };

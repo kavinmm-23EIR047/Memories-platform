@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Merienda:wght@300..900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Merienda:wght@300..900&family=Permanent+Marker&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
 
 /* Global Styles */
 body {
@@ -104,7 +111,72 @@ html {
   display: none;
 }
 
-/* Keyframes for loading bar inside dot */
+/* Full screen loader container */
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper for tire and fire animation */
+.loader-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+/* Fire background ring */
+.fire-ring {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #ff0, #ff6600, #ff0000);
+  filter: blur(15px);
+  animation: firePulse 0.8s infinite ease-in-out alternate;
+  z-index: 0;
+  box-shadow:
+    0 0 20px #ff0,
+    0 0 40px #ff6600,
+    0 0 60px #ff0000;
+}
+
+/* Tire spinner */
+.spinner {
+  width: 160px;
+  height: 160px;
+  z-index: 1;
+  position: relative;
+  animation: spin 1.5s linear infinite;
+}
+
+/* Keyframes for spinning tire */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Flame pulsing effect */
+@keyframes firePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
 @keyframes fillDot {
   from {
     width: 0%;
