@@ -7,11 +7,11 @@ import "swiper/css/navigation";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
 const videoReviews = [
-  { video: "/videos/review2.mp4" },
-  { video: "/videos/review1.mp4" },
-     { video: "/videos/review4.mp4" },
-        { video: "/videos/review5.mp4" },
-   { video: "/videos/review3.mp4" },
+  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562634/review2_vtfpjx.mp4" },
+  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review1_de4bvw.mp4" },
+     { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review4_fta6dj.mp4" },
+        { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562649/review5_feu0u9.mp4" },
+   { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562632/review3_dlb8j3.mp4" },
 ];
 
 const getInitials = (name = "") =>
