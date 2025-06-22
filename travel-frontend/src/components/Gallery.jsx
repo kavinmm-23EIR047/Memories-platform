@@ -5,15 +5,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import bus1 from "../assets/gallery/bus1.jpeg";
-import bus2 from "../assets/gallery/bus2.jpeg";
-import bus3 from "../assets/gallery/bus3.jpeg";
-import bus4 from "../assets/gallery/bus4.jpeg";
-import bus6 from "../assets/gallery/bus6.jpeg";
-import bus7 from "../assets/gallery/bus7.jpeg";
-import bus8 from "../assets/gallery/bus8.jpeg";
-import bus9 from "../assets/gallery/bus9.jpeg";
-import bus10 from "../assets/gallery/bus10.jpeg";
+const bus1 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750562996/bus1_seckuv.jpg";
+const bus2 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750562997/bus2_dddqem.jpg";
+const bus3 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750562990/bus3_u1xs03.jpg";
+const bus4 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750562993/bus4_wiikbr.jpg";
+const bus6 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750562992/bus6_nhl2zl.jpg";
+const bus7 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750562993/bus7_eucgcz.jpg";
+const bus8 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750563004/bus8_u9cbs7.jpg";
+const bus9 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750563001/bus9_yqanji.jpg";
+const bus10 = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750563003/bus10_ebl418.jpg";
 
 const buses = [
   { id: "bus1", name: "RKG", image: bus1 },
