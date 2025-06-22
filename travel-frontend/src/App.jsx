@@ -22,7 +22,7 @@ function App() {
       <div className="loader-container">
         <div className="loader-wrapper">
           <div className="fire-ring"></div>
-          <img src="/tire.png" alt="Spinning Tire" className="spinner" />
+          <img src="https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750587297/tire_acn66t.png" alt="Spinning Tire" className="spinner" />
         </div>
       </div>
     );
