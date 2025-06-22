@@ -124,11 +124,12 @@ import img117 from "../assets/gallery/bus1/1b7.jpeg";
 import img118 from "../assets/gallery/bus1/1b8.jpeg";
 import img119 from "../assets/gallery/bus1/1b9.jpeg";
 
-import bus4Video from "../assets/gallery/bus4/bus4video.mp4";
-import bus2Video from "../assets/gallery/bus2/bus2video.mp4";
-import bus9Video from "../assets/gallery/bus9/9busvideo.mp4";
-import bus10Video from "../assets/gallery/bus10/bus10video.mp4";
-import bus1Video from "../assets/gallery/bus1/bus1video.mp4";
+const bus4Video = "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562840/bus4video_ixejer.mp4";
+const bus2Video = "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562833/bus2video_njifkx.mp4";
+const bus9Video = "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562837/9busvideo_g2a4uy.mp4";
+const bus10Video = "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562844/bus10video_rqkrhr.mp4";
+const bus1Video = "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562853/bus1video_myjh5p.mp4";
+
 const busData = {
   bus1: {
     name: "RKG",
