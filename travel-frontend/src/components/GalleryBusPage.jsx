@@ -54,7 +54,7 @@ import img215 from "../assets/gallery/bus2/2b30.jpeg";
 
 
 import img28 from "../assets/gallery/bus2/2b8.jpeg";
-import img29 from "../assets/gallery/bus2/2b9.jpeg";
+// import img29 from "../assets/gallery/bus2/2b9.jpeg";
 import img30 from "../assets/gallery/bus2/2b10.jpeg";
 import img19 from "../assets/gallery/bus2/2b11.jpeg";
 import img18 from "../assets/gallery/bus2/2b12.jpeg";
@@ -137,7 +137,7 @@ const busData = {
   },
   bus2: {
     name: "Sabari",
-    images: [img21, img22, img23, img24, img25, img27, img26, img202, img203, img204, img205, img206, img207, img208, img209, img28, img29, img30, img19, img18, img17, img16, img15, img210, img211, img212, img213, img214, img215],
+    images: [img21, img22, img23, img24, img25, img27, img26, img202, img203, img204, img205, img206, img207, img208, img209, img28, img30, img19, img18, img17, img16, img15, img210, img211, img212, img213, img214, img215],
     video: bus2Video,
   },
   bus3: {
