@@ -51,7 +51,7 @@ const Feedback = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL || "http://localhost:5000"}/api/feedback`,
+        `${import.meta.env.VITE_BACKEND_URL || "https://memories-bakend.onrender.com"}/api/feedback`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
