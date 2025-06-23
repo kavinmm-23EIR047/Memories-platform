@@ -28,12 +28,12 @@ const buses = [
 ];
 
 const notes = [
-  { id: 1, name: "Celebrations", img: "/logo.jpg", to: "https://www.instagram.com/yourprofile", internal: false },
-  { id: 2, name: "Our Buses", img: "/logo.jpg", to: "https://www.instagram.com/yourprofile", internal: false },
-  { id: 3, name: "Services", img: "/logo.jpg", to: "https://www.instagram.com/yourprofile", internal: false },
-  { id: 4, name: "Events", img: "/logo.jpg", to: "https://www.instagram.com/yourprofile", internal: false },
-  { id: 5, name: "Instagram", img: "/logo.jpg", to: "https://www.instagram.com/yourprofile", internal: false },
-  { id: 6, name: "Contact", img: "/logo.jpg", to: "https://www.instagram.com/yourprofile", internal: false },
+  { id: 1, name: "BB-Toys", img: "/logo.jpg", to: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MTY0OTQyNjE3MzA1OTUw?story_media_id=3171922247084441712_59797187139&igsh=MTFxYmtoM3cyNzc0cQ==", internal: false },
+  { id: 2, name: "Keralam", img: "/logo.jpg", to: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4Mjc4MTI4OTY2MjA3MDgw?story_media_id=3223703601796731400_59797187139&igsh=MWZqYzFtd3NvaHZwZw==", internal: false },
+  { id: 3, name: "TN", img: "/logo.jpg", to: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTI2MjA3MDk0Nzc4NTQz?story_media_id=3171922247084441712_59797187139&igsh=MWJiZDNrcjFoMHR2Yw==", internal: false },
+  { id: 4, name: "Goa", img: "/logo.jpg", to: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDI2NTIwNzY3NjI0NzY0?story_media_id=3521934005876765091_59797187139&igsh=MWR1dnZ5Zm45MzRnNg==", internal: false },
+  { id: 5, name: "Karnataka", img: "/logo.jpg", to: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTk2MTc1OTgwMzgxMDkw?story_media_id=3238565676645816877_59797187139&igsh=MWE0MGp4N2xyYTR1cg==", internal: false },
+  { id: 6, name: "Logo", img: "/logo.jpg", to: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDIwNDA3MjY1NDc3NDE4?story_media_id=3345796277264467759_59797187139&igsh=MWU1ZGIwcGF4bXMz", internal: false },
 ];
 
 const Gallery = () => {
