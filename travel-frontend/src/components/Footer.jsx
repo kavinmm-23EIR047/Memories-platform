@@ -1,6 +1,6 @@
 import { FaWhatsapp, FaYoutube, FaInstagram } from "react-icons/fa";
 const bgImage = "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750562876/logo_bktbe6.jpg";
-const logo = "../assets/logos/logo.png";
+import logo from "../assets/logos/logo.png";
 const Footer = () => {
   return (
     <footer
