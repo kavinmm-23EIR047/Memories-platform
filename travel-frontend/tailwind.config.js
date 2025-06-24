@@ -35,7 +35,8 @@ module.exports = {
            hmu: ['"Permanent Marker"', 'cursive'],
            mui: ['"Merienda"', 'cursive'],
            cui: ['"Alegreya Sans SC", sans-serif'],
-           pai: ['"Nosifer"', 'sans-serif']
+           pai: ['"Nosifer"', 'sans-serif'],
+           mai: ['"Quantico", sans-serif']
       },
     },
   },
