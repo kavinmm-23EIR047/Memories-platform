@@ -136,12 +136,14 @@ const CardItem = ({ pkg }) => (
         />
       </div>
       <a
-        href={pkg.pdfUrl}
-        download
-        className="bg-[#fef3c7] text-[#4a3f00] px-3 py-1 rounded text-sm font-medium hover:bg-[#fde68a] transition font-mai"
-      >
-        Download Package PDF
-      </a>
+  href={pkg.pdfUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-[#fef3c7] text-[#4a3f00] px-3 py-1 rounded text-sm font-medium hover:bg-[#fde68a] transition font-mai"
+>
+  Download Package PDF
+</a>
+
       <a
         href={pkg.link}
         target="_blank"
