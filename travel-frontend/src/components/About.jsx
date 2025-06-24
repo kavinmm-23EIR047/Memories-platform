@@ -21,7 +21,7 @@ const About = () => {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#fecc00] font-edu">
-            About <span className="text-[#060304] font-semibold">Us</span>
+            Let's <span className="text-[#060304] font-semibold">go</span>
           </h2>
           <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto font-hmu">
             Learn more about who we are and why we do what we do.
@@ -64,7 +64,7 @@ const About = () => {
                Expedition 
             </h3>
             <p className="text-[#d1d1d1] text-base leading-relaxed font-mui">
-              "Inspiring Journeys, Creating Memories – Multiple Destination at a Time."
+              Inspiring Journeys, Creating Memories – Multiple Destination at a Time.
 Would you like it to sound more adventurous, luxurious, family-friendly, or eco-conscious? I can Design it your Travel.
             </p>
           </motion.div>
@@ -98,7 +98,7 @@ Would you like it to sound more adventurous, luxurious, family-friendly, or eco-
               About Us
             </h3>
             <p className="text-[#e0e0e0] text-base leading-relaxed font-mui">
-              IAt MEMORIESPLATFORM - HOLIDAYS, we believe that every journey should be as unique and unforgettable as the traveler embarking on it. Founded with a passion for exploration and a commitment to excellence, we’ve been crafting exceptional travel experiences that go beyond the ordinary.
+              At MEMORIESPLATFORM - HOLIDAYS, we believe that every journey should be as unique and unforgettable as the traveler embarking on it. Founded with a passion for exploration and a commitment to excellence, we’ve been crafting exceptional travel experiences that go beyond the ordinary.
 
 From serene escapes to adrenaline-filled adventures, our expert team combines insider knowledge, personalized service, and innovative technology to bring your travel dreams to life. Whether you're planning a weekend getaway or a once-in-a-lifetime expedition, we’re here to guide you every step of the way.
 
