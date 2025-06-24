@@ -299,7 +299,7 @@ const Home = () => {
   return (
     <div
       className="h-[90vh] relative overflow-hidden flex flex-col justify-center items-center text-white mt-10"
-      style={{ backgroundColor: "rgb(44,21,4)" }}
+      style={{ backgroundColor: "#691303" }}
     >
       {/* 🎥 Video Background */}
       <AnimatePresence mode="wait">
