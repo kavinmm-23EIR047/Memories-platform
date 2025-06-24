@@ -108,7 +108,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="mt-6 text-lg md:text-xl text-[#f1c709] font-semibold font-edu drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+          className="mt-6 text-lg md:text-xl text-[#f1c709] font-semibold font-mai drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
         >
           Explore All States
         </motion.div>
