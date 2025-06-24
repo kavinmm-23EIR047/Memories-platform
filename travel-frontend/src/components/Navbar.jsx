@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-[rgba(44,21,4,0.9)] shadow-[0_0_10px_rgba(241,199,9,0.4)] border-b border-[#f1c70950] font-montserrat">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-[#691303] shadow-[0_0_10px_rgba(241,199,9,0.4)] border-b border-[#f1c70950] font-montserrat">
       <div className="flex justify-between items-center h-28 px-6 max-w-7xl mx-auto">
         {/* Desktop Logo */}
         <div className="hidden md:flex items-center h-full transition-transform duration-300 hover:scale-105">
