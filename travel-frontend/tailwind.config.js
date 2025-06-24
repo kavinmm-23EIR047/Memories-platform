@@ -31,12 +31,11 @@ module.exports = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-           edu: ['"Edu NSW ACT Hand Pre"', 'cursive'],
            hmu: ['"Permanent Marker"', 'cursive'],
            mui: ['"Merienda"', 'cursive'],
            cui: ['"Alegreya Sans SC", sans-serif'],
            pai: ['"Nosifer"', 'sans-serif'],
-           mai: ['"Quantico", sans-serif']
+           mai: ['"Quantico", sans-serif'],
       },
     },
   },
