@@ -336,7 +336,7 @@ const Services = () => {
             />
             <div className="bg-white p-6">
               <h3 className="text-xl font-semibold text-[#060304] mb-2 font-mai">
-                Record of Munnar – <span className="font-edu text-[#fecc00]">Single Stroke with 90 Jeeps</span>
+                Record of Munnar – <span className="font-cui text-[#fecc00]">Single Stroke with 90 Jeeps</span>
               </h3>
               <p className="text-gray-600 text-sm font-cui">
                 Our team created history in Munnar by pulling 90 jeeps in a single stroke — a demonstration of incredible coordination, power, and team spirit.
