@@ -172,8 +172,8 @@ const Services = () => {
   className="py-20 md:py-28 px-4 md:px-10 bg-gray-50 text-center font-['Open_Sans']"
 >
   <div className="max-w-6xl mx-auto space-y-8">
-    <h2 className="text-4xl md:text-5xl font-bold text-[#fecc00] font-mai">
-      Our <span className="text-[#060304] font-semibold">Services</span>
+    <h2 className="text-4xl md:text-5xl font-bold text-[#fecc00] font-mui">
+      Our <span className="text-[#060304] font-semibold font-edu">Services</span>
     </h2>
 
         <Swiper
