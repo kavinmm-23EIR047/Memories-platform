@@ -61,10 +61,11 @@ const About = () => {
           >
             <Target className="mx-auto text-[#fecc00] mb-4" size={36} />
             <h3 className="text-2xl font-semibold text-[#fecc00] mb-4">
-              Our Mission
+               Expedition 
             </h3>
             <p className="text-[#d1d1d1] text-base leading-relaxed font-mui">
-              To deliver safe, reliable, and memorable travel experiences across South India with excellent customer service and top-class vehicles.
+              "Inspiring Journeys, Creating Memories – Multiple Destination at a Time."
+Would you like it to sound more adventurous, luxurious, family-friendly, or eco-conscious? I can Design it your Travel.
             </p>
           </motion.div>
 
@@ -77,10 +78,11 @@ const About = () => {
           >
             <Eye className="mx-auto text-[#fecc00] mb-4" size={36} />
             <h3 className="text-2xl font-semibold text-[#fecc00] mb-4">
-              Our Vision
+             Field of Innovation
             </h3>
             <p className="text-[#d1d1d1] text-base leading-relaxed font-mui">
-              To become the most trusted name in travel for South India, setting new standards in comfort, convenience, and customer satisfaction.
+              Guiding Journeys, Crafting Dreams — Where Every Destination Becomes a Story
+— Where Technology Meets Wonder, and Every Journey Begins with a Natural Spark of Discovery.
             </p>
           </motion.div>
 
@@ -93,10 +95,16 @@ const About = () => {
           >
             <User2 className="mx-auto text-[#fecc00] mb-4" size={36} />
             <h3 className="text-2xl font-semibold text-[#fecc00] mb-4">
-              About Me
+              About Us
             </h3>
             <p className="text-[#e0e0e0] text-base leading-relaxed font-mui">
-              I'm <strong>Kavin MM</strong>, passionate about building tech-powered platforms that create impact. As the founder of <strong>AK WebFlair</strong>, I deliver innovative digital solutions and user-focused designs.
+              IAt MEMORIESPLATFORM - HOLIDAYS, we believe that every journey should be as unique and unforgettable as the traveler embarking on it. Founded with a passion for exploration and a commitment to excellence, we’ve been crafting exceptional travel experiences that go beyond the ordinary.
+
+From serene escapes to adrenaline-filled adventures, our expert team combines insider knowledge, personalized service, and innovative technology to bring your travel dreams to life. Whether you're planning a weekend getaway or a once-in-a-lifetime expedition, we’re here to guide you every step of the way.
+
+With a global network of partners and a heart rooted in hospitality, we’re not just planning trips — we’re creating memories, forging connections, and inspiring the spirit of discovery.
+
+Let’s turn your next destination into a meaningful story.
             </p>
           </motion.div>
         </div>
