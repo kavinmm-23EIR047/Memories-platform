@@ -78,7 +78,7 @@ const Navbar = () => {
 
       {/* Mobile Slide-in Menu */}
       <div
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[rgba(44,21,4,0.95)] backdrop-blur-md transition-transform duration-500 ease-in-out ${
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[#691303] backdrop-blur-md transition-transform duration-500 ease-in-out ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } z-40 flex flex-col justify-between pt-28 pb-10`}
       >
