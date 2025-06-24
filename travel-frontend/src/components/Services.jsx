@@ -73,7 +73,7 @@ const packageCards = [
     description:
       "Experience Goa’s beaches, nightlife, Panjim markets, and historic forts in a relaxing 4-day trip.",
     videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/tn_w74k94.mp4",
-    pdfUrl: "/pdfs/goa-package.pdf",
+    pdfUrl: "/MP-holidays-tamilnadu.pdf",
     link: "https://www.instagram.com/reel/DIOdJ4wpZii/?igsh=b3p1NXduaGs2ZXhv",
   },
   {
@@ -82,7 +82,7 @@ const packageCards = [
     description:
       "Explore Vagamon, Cochin, Munnar, Wayanad, and Alleppey in this 5-day premium Kerala package.",
     videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/kerala_ltmprk.mp4",
-    pdfUrl: "/pdfs/kerala-package.pdf",
+    pdfUrl: "/MP-holidays-kerala.pdf",
     link: "https://www.instagram.com/reel/DDYm8g7JLSE/?igsh=MTZ1azZ2OGtmeGtuNw==",
   },
   {
@@ -91,7 +91,7 @@ const packageCards = [
     description:
       "Discover Mysore, Coorg, Hampi, and Gokarna in this 7-day Karnataka heritage tour.",
     videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/karnataka_atreyf",
-    pdfUrl: "/pdfs/karnataka-package.pdf",
+    pdfUrl: "/MP-holidays-karnataka.pdf",
     link: "https://www.instagram.com/reel/DDZ3kECyMHz/?igsh=MTduYmZ5aG5zNnJqYQ==",
   },
   {
@@ -100,7 +100,7 @@ const packageCards = [
     description:
       "Experience Goa’s beaches, nightlife, Panjim markets, and historic forts in a relaxing 4-day trip.",
     videoUrl:"https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/goa_bxy1hq",
-    pdfUrl: "/pdfs/goa-package.pdf",
+    pdfUrl: "/MP-holidays-Goa.pdf",
     link: "https://www.instagram.com/reel/DIOdJ4wpZii/?igsh=b3p1NXduaGs2ZXhv",
   },
   
