@@ -172,7 +172,7 @@ const Services = () => {
   className="py-20 md:py-28 px-4 md:px-10 bg-gray-50 text-center font-['Open_Sans']"
 >
   <div className="max-w-6xl mx-auto space-y-8">
-    <h2 className="text-4xl md:text-5xl font-bold text-[#fecc00] font-edu">
+    <h2 className="text-4xl md:text-5xl font-bold text-[#fecc00] font-mai">
       Our <span className="text-[#060304] font-semibold">Services</span>
     </h2>
 
@@ -202,7 +202,7 @@ const Services = () => {
 
       {/* Overlay (default dark, becomes gradient on hover) */}
       <div className="absolute inset-0 bg-black/30 group-hover:bg-gradient-to-tr group-hover:from-[#fecc00]/80 group-hover:to-[#ffb347]/90 transition-all duration-500 flex items-center justify-center">
-        <h3 className="text-xl font-semibold text-white group-hover:text-black text-center px-4 font-mui drop-shadow-[0_4px_6px_rgba(0,0,0,0.7)] group-hover:drop-shadow-none transition-all duration-500">
+        <h3 className="text-xl font-semibold text-white group-hover:text-black text-center px-4 font-mai drop-shadow-[0_4px_6px_rgba(0,0,0,0.7)] group-hover:drop-shadow-none transition-all duration-500">
           {service.title}
         </h3>
       </div>
