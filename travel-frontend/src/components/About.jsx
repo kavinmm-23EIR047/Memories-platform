@@ -57,7 +57,7 @@ const About = () => {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-[rgb(44,21,4)] border border-[#fecc00]/30 backdrop-blur-md bg-opacity-95 p-6 md:p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            className="bg-[#691303] border border-[#fecc00]/30 backdrop-blur-md bg-opacity-95 p-6 md:p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <Target className="mx-auto text-[#fecc00] mb-4" size={36} />
             <h3 className="text-2xl font-semibold text-[#fecc00] mb-4">
@@ -74,7 +74,7 @@ Would you like it to sound more adventurous, luxurious, family-friendly, or eco-
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="bg-[rgb(44,21,4)] border border-[#fecc00]/30 backdrop-blur-md bg-opacity-95 p-6 md:p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            className="bg-[#691303] border border-[#fecc00]/30 backdrop-blur-md bg-opacity-95 p-6 md:p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <Eye className="mx-auto text-[#fecc00] mb-4" size={36} />
             <h3 className="text-2xl font-semibold text-[#fecc00] mb-4">
@@ -91,7 +91,7 @@ Would you like it to sound more adventurous, luxurious, family-friendly, or eco-
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="bg-[rgb(44,21,4)] border border-[#fecc00]/30 backdrop-blur-md bg-opacity-95 p-6 md:p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            className="bg-[#691303] border border-[#fecc00]/30 backdrop-blur-md bg-opacity-95 p-6 md:p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transition-shadow duration-300"
           >
             <User2 className="mx-auto text-[#fecc00] mb-4" size={36} />
             <h3 className="text-2xl font-semibold text-[#fecc00] mb-4">
