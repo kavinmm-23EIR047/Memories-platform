@@ -50,9 +50,9 @@ const Home = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-hmu font-normal text-[#f1c709] drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
+          className="text-4xl md:text-6xl font-pai font-normal text-[#f1c709] drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]"
         >
-          Memories <span className="font-hmu font-normal text-[#ffffff] drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">Platform</span>
+          Memories <span className="font-pai font-normal text-[#ffffff] drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">Platform</span>
         </motion.h1>
 
 <motion.p
