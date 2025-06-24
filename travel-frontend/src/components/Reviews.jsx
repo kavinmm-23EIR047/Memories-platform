@@ -44,7 +44,7 @@ const Reviews = () => {
 
       <div className="max-w-6xl mx-auto">
         <h2
-          className="text-3xl md:text-4xl font-bold text-center mb-10 font-edu"
+          className="text-3xl md:text-4xl font-bold text-center mb-10 font-mui"
           style={{ color: "#ffcc00" }}
         >
           Reviews
@@ -130,7 +130,7 @@ const Reviews = () => {
           {getInitials(review.name || "Anonymous")}
         </div>
         <div>
-          <p className="font-semibold text-gray-900 font-mui text-lg">
+          <p className="font-semibold text-gray-900 font-mai text-lg">
             {review.name || "Anonymous"}
           </p>
           <div className="flex text-yellow-500 text-base mt-1">
