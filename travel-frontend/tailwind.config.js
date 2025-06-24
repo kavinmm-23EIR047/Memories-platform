@@ -31,6 +31,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+           edu: ['"Edu NSW ACT Hand Pre"', 'cursive'],
            hmu: ['"Permanent Marker"', 'cursive'],
            mui: ['"Merienda"', 'cursive'],
            cui: ['"Alegreya Sans SC", sans-serif'],
