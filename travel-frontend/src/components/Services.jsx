@@ -71,7 +71,7 @@ const packageCards = [
     title: "Tamil Nadu",
     image: "https://images.unsplash.com/photo-1572886034137-b77ee990d594?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Experience Goa’s beaches, nightlife, Panjim markets, and historic forts in a relaxing 4-day trip.",
+      "Discover Kodaikanal, Coaker’s Walk, Pillar Rocks, Berijam Lake, and Silver Cascade in this 2-day Tamil Nadu hill station tour.",
     videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/tn_w74k94.mp4",
     pdfUrl: "/MP-holidays-tamilnadu.pdf",
     link: "https://www.instagram.com/reel/DIOdJ4wpZii/?igsh=b3p1NXduaGs2ZXhv",
@@ -80,7 +80,7 @@ const packageCards = [
     title: "Kerala Explorer",
     image: "https://plus.unsplash.com/premium_photo-1697729438401-fcb4ff66d9a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Explore Vagamon, Cochin, Munnar, Wayanad, and Alleppey in this 5-day premium Kerala package.",
+      "Explore Vagamon, Cochin, Munnar, Wayanad, and Alleppey in this 3-day premium Kerala package.",
     videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/kerala_ltmprk.mp4",
     pdfUrl: "/MP-holidays-kerala.pdf",
     link: "https://www.instagram.com/reel/DDYm8g7JLSE/?igsh=MTZ1azZ2OGtmeGtuNw==",
@@ -89,7 +89,7 @@ const packageCards = [
     title: "Karnataka Heritage",
     image: "https://images.unsplash.com/photo-1631714712922-eaa39e4452fa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
-      "Discover Mysore, Coorg, Hampi, and Gokarna in this 7-day Karnataka heritage tour.",
+      "Discover Mysore, Coorg, Hampi, and Gokarna in this 4-day Karnataka heritage tour.",
     videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/karnataka_atreyf",
     pdfUrl: "/MP-holidays-karnataka.pdf",
     link: "https://www.instagram.com/reel/DDZ3kECyMHz/?igsh=MTduYmZ5aG5zNnJqYQ==",
@@ -98,7 +98,7 @@ const packageCards = [
     title: "Goa Getaway",
     image: "https://images.unsplash.com/photo-1682743710558-b338ba285925?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z29hJTIwYmVhY2h8ZW58MHx8MHx8fDA%3D",
     description:
-      "Experience Goa’s beaches, nightlife, Panjim markets, and historic forts in a relaxing 4-day trip.",
+      "Experience Goa’s beaches, nightlife, Panjim markets, and historic forts in a relaxing 7-day trip.",
     videoUrl:"https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/goa_bxy1hq",
     pdfUrl: "/MP-holidays-Goa.pdf",
     link: "https://www.instagram.com/reel/DIOdJ4wpZii/?igsh=b3p1NXduaGs2ZXhv",
