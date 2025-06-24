@@ -126,8 +126,8 @@ const CardItem = ({ pkg }) => (
   <div className="bg-[#fffef8] shadow-lg rounded-lg overflow-hidden">
     <img src={pkg.image} alt={pkg.title} className="w-full h-48 object-cover" />
     <div className="p-4">
-      <h3 className="text-lg font-bold text-[#302d00] mb-2">{pkg.title}</h3>
-      <p className="text-sm text-[#7c7a69] mb-3">{pkg.description}</p>
+      <h3 className="text-lg font-bold text-[#302d00] mb-2 font-mai">{pkg.title}</h3>
+      <p className="text-sm text-[#7c7a69] mb-3 font-cui">{pkg.description}</p>
       <div className="aspect-video mb-3">
         <video
           src={pkg.videoUrl}
@@ -138,7 +138,7 @@ const CardItem = ({ pkg }) => (
       <a
         href={pkg.pdfUrl}
         download
-        className="bg-[#fef3c7] text-[#4a3f00] px-3 py-1 rounded text-sm font-medium hover:bg-[#fde68a] transition"
+        className="bg-[#fef3c7] text-[#4a3f00] px-3 py-1 rounded text-sm font-medium hover:bg-[#fde68a] transition font-mai"
       >
         Download Package PDF
       </a>
@@ -146,7 +146,7 @@ const CardItem = ({ pkg }) => (
         href={pkg.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block mt-3 bg-[#facc15] text-[#1c1b00] px-4 py-2 rounded text-center hover:bg-[#eab308] transition"
+        className="block mt-3 bg-[#facc15] text-[#1c1b00] px-4 py-2 rounded text-center hover:bg-[#eab308] transition font-mai"
       >
         Explore
       </a>
