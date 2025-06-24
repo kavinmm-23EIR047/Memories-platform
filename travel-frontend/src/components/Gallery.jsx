@@ -122,7 +122,7 @@ const Gallery = () => {
                         <img src={note.img} alt={note.name} className="w-full h-full object-cover rounded-full" />
                       </div>
                     </div>
-                    <p className="mt-2 text-sm font-medium text-center text-[#060304] font-mui w-20 truncate">{note.name}</p>
+                    <p className="mt-2 text-sm font-medium text-center text-[#060304] font-mai w-20 truncate">{note.name}</p>
                   </a>
                 )}
               </SwiperSlide>
@@ -149,7 +149,7 @@ const Gallery = () => {
                     <img src={note.img} alt={note.name} className="w-full h-full object-cover rounded-full" />
                   </div>
                 </div>
-                <p className="mt-2 text-sm font-medium text-center text-[#060304] font-['Open_Sans'] w-20 truncate">{note.name}</p>
+                <p className="mt-2 text-sm font-medium text-center text-[#060304] font-mai w-20 truncate">{note.name}</p>
               </a>
             )
           )}
