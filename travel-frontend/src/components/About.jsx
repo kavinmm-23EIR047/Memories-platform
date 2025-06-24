@@ -99,11 +99,6 @@ Would you like it to sound more adventurous, luxurious, family-friendly, or eco-
             </h3>
             <p className="text-[#e0e0e0] text-base leading-relaxed font-mui">
               At MEMORIESPLATFORM - HOLIDAYS, we believe that every journey should be as unique and unforgettable as the traveler embarking on it. Founded with a passion for exploration and a commitment to excellence, we’ve been crafting exceptional travel experiences that go beyond the ordinary.
-
-From serene escapes to adrenaline-filled adventures, our expert team combines insider knowledge, personalized service, and innovative technology to bring your travel dreams to life. Whether you're planning a weekend getaway or a once-in-a-lifetime expedition, we’re here to guide you every step of the way.
-
-With a global network of partners and a heart rooted in hospitality, we’re not just planning trips — we’re creating memories, forging connections, and inspiring the spirit of discovery.
-
 Let’s turn your next destination into a meaningful story.
             </p>
           </motion.div>
