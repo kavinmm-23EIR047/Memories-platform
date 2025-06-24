@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#f5f5f5] py-20 px-4 md:px-8 font-['Open_Sans']"
+      className="bg-[#691303] py-20 px-4 md:px-8 font-['Open_Sans']"
     >
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Title */}
