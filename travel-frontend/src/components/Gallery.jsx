@@ -69,7 +69,7 @@ const Gallery = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end items-center p-6 text-white text-center">
-                  <h3 className="text-3xl sm:text-4xl font-bold mb-6 font-edu">{bus.name}</h3>
+                  <h3 className="text-3xl sm:text-4xl font-bold mb-6 font-mai">{bus.name}</h3>
                   <Link
                     to={`/gallery/${bus.id}`}
                     onClick={handleExploreClick}
