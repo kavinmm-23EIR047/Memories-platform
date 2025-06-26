@@ -9,9 +9,9 @@ import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 const videoReviews = [
   { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562634/review2_vtfpjx.mp4" },
   { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review1_de4bvw.mp4" },
-     { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review4_fta6dj.mp4" },
-        { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562649/review5_feu0u9.mp4" },
-   { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562632/review3_dlb8j3.mp4" },
+  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review4_fta6dj.mp4" },
+  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562649/review5_feu0u9.mp4" },
+  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562632/review3_dlb8j3.mp4" },
 ];
 
 const getInitials = (name = "") =>
@@ -37,11 +37,10 @@ const Reviews = () => {
   }, []);
 
   return (
- <section
+    <section
       id="reviews"
       className="bg-[#f5f5f5] py-20 px-4 md:px-8 font-['Open_Sans']"
     >
-
       <div className="max-w-6xl mx-auto">
         <h2
           className="text-3xl md:text-4xl font-bold text-center mb-10 font-mui"
@@ -70,10 +69,11 @@ const Reviews = () => {
                   <div className="relative w-full aspect-video">
                     <video
                       className="absolute inset-0 w-full h-full object-cover rounded-xl"
-                      src={review.video}
+                      src={review.video + "#t=0.1"}
                       controls
                       playsInline
                       preload="metadata"
+                      muted
                     />
                   </div>
                   <div className="p-4 bg-gray-100 text-center">
@@ -111,56 +111,50 @@ const Reviews = () => {
                 768: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
               }}
-              modules={[Navigation,Pagination, Autoplay]}
+              modules={[Navigation, Pagination, Autoplay]}
             >
               {textReviews.map((review, index) => {
-  const rating =
-    review.rating !== undefined && review.rating !== null
-      ? parseFloat(review.rating)
-      : Math.round((Math.random() * 1.5 + 3.5) * 2) / 2;
+                const rating =
+                  review.rating !== undefined && review.rating !== null
+                    ? parseFloat(review.rating)
+                    : Math.round((Math.random() * 1.5 + 3.5) * 2) / 2;
 
-  return (
-    <SwiperSlide key={index}>
-  <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-[#fceabb] via-[#f8b500] to-[#ffdd95] shadow-md hover:shadow-xl transition duration-300">
-    {/* Inner container with larger size */}
-    <div className="bg-[#fffdf7] rounded-2xl p-8 min-h-[240px] flex flex-col justify-between">
-      {/* Header with initials */}
-      <div className="flex items-center mb-5">
-        <div className="w-12 h-12 rounded-full bg-[#f8b500] flex items-center justify-center text-white font-bold mr-4 font-cui text-lg shadow-sm">
-          {getInitials(review.name || "Anonymous")}
-        </div>
-        <div>
-          <p className="font-semibold text-gray-900 font-mai text-lg">
-            {review.name || "Anonymous"}
-          </p>
-          <div className="flex text-yellow-500 text-base mt-1">
-            {[...Array(5)].map((_, i) =>
-              i + 1 <= Math.floor(rating) ? (
-                <FaStar key={i} />
-              ) : i + 0.5 === rating ? (
-                <FaStarHalfAlt key={i} />
-              ) : (
-                <FaRegStar key={i} />
-              )
-            )}
-          </div>
-        </div>
-      </div>
-      {/* Comment */}
-      <p className="text-gray-1100 text-2xl leading-relaxed font-cui">
-  “{review.comment}”
-</p>
-    </div>
-  </div>
-</SwiperSlide>
-
-
+                return (
+                  <SwiperSlide key={index}>
+                    <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-[#fceabb] via-[#f8b500] to-[#ffdd95] shadow-md hover:shadow-xl transition duration-300">
+                      <div className="bg-[#fffdf7] rounded-2xl p-8 min-h-[240px] flex flex-col justify-between">
+                        <div className="flex items-center mb-5">
+                          <div className="w-12 h-12 rounded-full bg-[#f8b500] flex items-center justify-center text-white font-bold mr-4 font-cui text-lg shadow-sm">
+                            {getInitials(review.name || "Anonymous")}
+                          </div>
+                          <div>
+                            <p className="font-semibold text-gray-900 font-mai text-lg">
+                              {review.name || "Anonymous"}
+                            </p>
+                            <div className="flex text-yellow-500 text-base mt-1">
+                              {[...Array(5)].map((_, i) =>
+                                i + 1 <= Math.floor(rating) ? (
+                                  <FaStar key={i} />
+                                ) : i + 0.5 === rating ? (
+                                  <FaStarHalfAlt key={i} />
+                                ) : (
+                                  <FaRegStar key={i} />
+                                )
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <p className="text-gray-1100 text-2xl leading-relaxed font-cui">
+                          “{review.comment}”
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
                 );
               })}
             </Swiper>
           )}
         </div>
-        
       </div>
     </section>
   );
