@@ -125,7 +125,24 @@ html {
   width: 160px;
   height: 160px;
 }
-
+@layer utilities {
+  .animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+  }
+  .animate-slide-delay {
+    animation-delay: 1.5s;
+  }
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
 /* Fire background ring */
 .fire-ring {
   position: absolute;
