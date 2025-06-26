@@ -6,7 +6,7 @@ import GalleryBusPage from "./components/GalleryBusPage";
 import Feedback from "./components/Feedback";
 import Loader from "./components/Loader.tsx";
 import { useState, useEffect } from "react";
-import "./index.css"; // Fire loader styles are here
+import "./index.css"; // Include loader styles here
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -14,20 +14,11 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4000); // Loader will show for 2 seconds
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return (
-      <div className="loader-container">
-        <div className="loader-wrapper">
-          <div className="fire-ring"></div>
-          <img src="https://res.cloudinary.com/dpdhfrk2t/image/upload/v1750587297/tire_acn66t.png" alt="Spinning Tire" className="spinner" />
-        </div>
-      </div>
-    );
-  }
+  if (loading) return <Loader />;
 
   return (
     <div className="bg-white text-gray-800">
