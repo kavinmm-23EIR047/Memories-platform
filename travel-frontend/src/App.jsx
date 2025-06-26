@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import MainScrollPage from "./components/MainScrollPage";
 import GalleryBusPage from "./components/GalleryBusPage";
 import Feedback from "./components/Feedback";
+import Loader from "./components/Loader.tsx";
 import { useState, useEffect } from "react";
 import "./index.css"; // Fire loader styles are here
 
@@ -13,7 +14,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Loader will show for 2 seconds
+    }, 4000); // Loader will show for 2 seconds
     return () => clearTimeout(timer);
   }, []);
 
