@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import MainScrollPage from "./components/MainScrollPage";
 import GalleryBusPage from "./components/GalleryBusPage";
 import Feedback from "./components/Feedback";
-import Loader from "./components/Loader.tsx";
+import Loader from "./components/Loader.jsx";
 import { useState, useEffect } from "react";
 import "./index.css"; // Include loader styles here
 
