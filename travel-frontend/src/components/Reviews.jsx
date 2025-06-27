@@ -26,7 +26,7 @@ const Reviews = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/feedbacks`)
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/feedbacks`)
       .then((res) => res.json())
       .then((data) => setTextReviews(data))
       .catch((err) => {
@@ -37,15 +37,9 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section
-      id="reviews"
-      className="bg-[#f5f5f5] py-20 px-4 md:px-8 font-['Open_Sans']"
-    >
+    <section id="reviews" className="py-20 px-4 md:px-8 font-['Open_Sans'] bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2
-          className="text-3xl md:text-4xl font-bold text-center mb-10 font-mui"
-          style={{ color: "#ffcc00" }}
-        >
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 font-mui text-[#ffcc00]">
           Reviews
         </h2>
 
@@ -54,84 +48,83 @@ const Reviews = () => {
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
-            autoplay={{ delay: 40000, disableOnInteraction: false }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
-            navigation={true}
-            breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 2 },
-            }}
+            navigation
+            breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 2 } }}
             modules={[Pagination, Navigation, Autoplay]}
           >
             {videoReviews.map((review, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                  <div className="relative w-full aspect-video">
-                    <video
-                      className="absolute inset-0 w-full h-full object-cover rounded-xl"
-                      src={review.video + "#t=0.1"}
-                      controls
-                      playsInline
-                      preload="metadata"
-                      muted
-                    />
-                  </div>
-                  <div className="p-4 bg-gray-100 text-center">
-                    <h3 className="text-lg font-semibold text-gray-800">
-                      {review.name}
-                    </h3>
-                  </div>
-                </div>
+              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+  <div className="relative w-full aspect-video bg-black">
+    <video
+      src={review.video}
+      controls
+      playsInline
+      preload="metadata"
+      className="w-full h-full object-cover rounded-xl"
+    />
+  </div>
+</div>
+
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
         {/* ✨ Text Reviews */}
-        <div className="mt-10">
-          <h3 className="text-2xl font-bold text-center mb-6 font-mui">
-            <span style={{ color: "#ffcc00" }}>Responsible</span>{" "}
-            <span style={{ color: "#000200" }}>Reviews</span>
+        <div className="mt-12">
+          <h3 className="text-xl md:text-2xl font-semibold text-center mb-6 font-mui tracking-wide">
+            <span className="text-[#ffcc00]">Responsible</span>{" "}
+            <span className="text-[#000200]">Reviews</span>
           </h3>
 
           {loading ? (
-            <p className="text-center text-gray-500 font-cui">Loading reviews...</p>
+            <p className="text-center text-gray-500 font-cui text-sm">Loading reviews...</p>
           ) : textReviews.length === 0 ? (
-            <p className="text-center text-gray-500 font-cui">
+            <p className="text-center text-gray-500 font-cui text-sm">
               No reviews yet. Be the first to leave one!
             </p>
           ) : (
             <Swiper
-              spaceBetween={20}
+              spaceBetween={16}
               slidesPerView={1}
-              loop={true}
+              loop
               autoplay={{ delay: 3500, disableOnInteraction: false }}
               pagination={{ clickable: true }}
-              breakpoints={{
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-              }}
-              modules={[Navigation, Pagination, Autoplay]}
+              navigation
+              breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
+              modules={[Pagination, Navigation, Autoplay]}
+              className="pb-6 review-swiper"
             >
               {textReviews.map((review, index) => {
                 const rating =
-                  review.rating !== undefined && review.rating !== null
+                  review.rating !== undefined && !isNaN(review.rating)
                     ? parseFloat(review.rating)
                     : Math.round((Math.random() * 1.5 + 3.5) * 2) / 2;
 
                 return (
                   <SwiperSlide key={index}>
-                    <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-[#fceabb] via-[#f8b500] to-[#ffdd95] shadow-md hover:shadow-xl transition duration-300">
-                      <div className="bg-[#fffdf7] rounded-2xl p-8 min-h-[240px] flex flex-col justify-between">
-                        <div className="flex items-center mb-5">
-                          <div className="w-12 h-12 rounded-full bg-[#f8b500] flex items-center justify-center text-white font-bold mr-4 font-cui text-lg shadow-sm">
-                            {getInitials(review.name || "Anonymous")}
-                          </div>
+                    <div className="rounded-xl p-[2px] bg-gradient-to-br from-[#fceabb] via-[#f8b500] to-[#ffdd95] shadow-sm transition-all duration-300 hover:shadow-lg">
+                      <div className="bg-[#fffdf7] rounded-xl p-6 min-h-[200px] flex flex-col justify-between">
+                        <div className="flex items-center mb-4">
+                          {review.image ? (
+                            <img
+                              src={review.image}
+                              alt="reviewer"
+                              className="w-10 h-10 rounded-full object-cover mr-3"
+                            />
+                          ) : (
+                            <div className="w-10 h-10 rounded-full bg-[#f8b500] flex items-center justify-center text-white font-bold mr-3 font-cui text-sm">
+                              {getInitials(review.name || "Anonymous")}
+                            </div>
+                          )}
                           <div>
-                            <p className="font-semibold text-gray-900 font-mai text-lg">
+                            <p className="font-semibold text-gray-800 font-mai text-base">
                               {review.name || "Anonymous"}
                             </p>
-                            <div className="flex text-yellow-500 text-base mt-1">
+                            <div className="flex text-yellow-500 text-sm mt-1">
                               {[...Array(5)].map((_, i) =>
                                 i + 1 <= Math.floor(rating) ? (
                                   <FaStar key={i} />
@@ -144,8 +137,8 @@ const Reviews = () => {
                             </div>
                           </div>
                         </div>
-                        <p className="text-gray-1100 text-2xl leading-relaxed font-cui">
-                          “{review.comment}”
+                        <p className="text-gray-800 text-sm leading-relaxed font-mai italic">
+                          {review.comment}
                         </p>
                       </div>
                     </div>
