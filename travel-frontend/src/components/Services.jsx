@@ -129,11 +129,13 @@ const CardItem = ({ pkg }) => (
       <h3 className="text-lg font-bold text-[#302d00] mb-2 font-mai">{pkg.title}</h3>
       <p className="text-sm text-[#7c7a69] mb-3 font-cui">{pkg.description}</p>
       <div className="aspect-video mb-3">
-        <video
-          src={pkg.videoUrl}
-          controls
-          className="w-full h-full object-cover rounded"
-        />
+            <video
+  src={pkg.videoUrl}
+  controls
+  playsInline
+  preload="metadata"
+  className="w-full h-full object-cover rounded bg-black"
+/>
       </div>
       <a
   href={pkg.pdfUrl}
