@@ -7,11 +7,26 @@ import "swiper/css/navigation";
 import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
 const videoReviews = [
-  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562634/review2_vtfpjx.mp4" },
-  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review1_de4bvw.mp4" },
-  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review4_fta6dj.mp4" },
-  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562649/review5_feu0u9.mp4" },
-  { video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562632/review3_dlb8j3.mp4" },
+  {
+    video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562634/review2_vtfpjx.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751102028/review1_pg5x3m.jpg"
+  },
+  {
+    video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review1_de4bvw.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751102028/review2_kvciiy.jpg"
+  },
+  {
+    video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562620/review4_fta6dj.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751102028/review3_jkhl8m.jpg"
+  },
+  {
+    video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562649/review5_feu0u9.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751102028/review4_a9yrro.jpg"
+  },
+  {
+    video: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1750562632/review3_dlb8j3.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751102028/review5_dzbywx.jpg"
+  }
 ];
 
 const getInitials = (name = "") =>
@@ -43,7 +58,7 @@ const Reviews = () => {
           Reviews
         </h2>
 
-        {/* 🎥 Video Reviews */}
+       {/* 🎥 Video Reviews */}
         <div className="mb-16">
           <Swiper
             spaceBetween={20}
@@ -56,18 +71,18 @@ const Reviews = () => {
           >
             {videoReviews.map((review, index) => (
               <SwiperSlide key={index}>
-              <div className="bg-white rounded-xl shadow-md overflow-hidden">
-  <div className="relative w-full aspect-video bg-black">
-    <video
-      src={review.video}
-      controls
-      playsInline
-      preload="metadata"
-      className="w-full h-full object-cover rounded-xl"
-    />
-  </div>
-</div>
-
+                <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                  <div className="relative w-full aspect-video bg-black">
+                    <video
+                      src={review.video}
+                      poster={review.poster}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                  </div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
