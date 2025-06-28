@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // Assets
-import collegeImg from "../assets/logos/collegeservice.jpeg";
+import collegeImg from "../assets/gallery/7.jpeg";
 import familyImg from "../assets/logos/familyservice.jpg";
 import corporateImg from "../assets/logos/corporateservice.jpg";
 import schoolImg from "../assets/logos/schoolservice.jpeg";
@@ -67,12 +67,13 @@ const headingTexts = [
 ];
 
 const packageCards = [
-     {
+  {
     title: "Tamil Nadu",
     image: "https://images.unsplash.com/photo-1572886034137-b77ee990d594?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Discover Kodaikanal, Coaker’s Walk, Pillar Rocks, Berijam Lake, and Silver Cascade in this 2-day Tamil Nadu hill station tour.",
     videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/tn_w74k94.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751103106/tn_bnyx5c.jpg",
     pdfUrl: "/MP-holidays-tamilnadu.pdf",
     link: "https://www.instagram.com/reel/DIOdJ4wpZii/?igsh=b3p1NXduaGs2ZXhv",
   },
@@ -82,6 +83,7 @@ const packageCards = [
     description:
       "Explore Vagamon, Cochin, Munnar, Wayanad, and Alleppey in this 3-day premium Kerala package.",
     videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/kerala_ltmprk.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751103075/kerala_lpklck.jpg",
     pdfUrl: "/MP-holidays-kerala.pdf",
     link: "https://www.instagram.com/reel/DDYm8g7JLSE/?igsh=MTZ1azZ2OGtmeGtuNw==",
   },
@@ -90,7 +92,8 @@ const packageCards = [
     image: "https://images.unsplash.com/photo-1631714712922-eaa39e4452fa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
       "Discover Mysore, Coorg, Hampi, and Gokarna in this 4-day Karnataka heritage tour.",
-    videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/karnataka_atreyf",
+    videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/karnataka_atreyf.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751103075/karnataka_mo4lor.jpg",
     pdfUrl: "/MP-holidays-karnataka.pdf",
     link: "https://www.instagram.com/reel/DDZ3kECyMHz/?igsh=MTduYmZ5aG5zNnJqYQ==",
   },
@@ -99,12 +102,13 @@ const packageCards = [
     image: "https://images.unsplash.com/photo-1682743710558-b338ba285925?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z29hJTIwYmVhY2h8ZW58MHx8MHx8fDA%3D",
     description:
       "Experience Goa’s beaches, nightlife, Panjim markets, and historic forts in a relaxing 7-day trip.",
-    videoUrl:"https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/goa_bxy1hq",
+    videoUrl: "https://res.cloudinary.com/dpdhfrk2t/video/upload/v1719050167/goa_bxy1hq.mp4",
+    poster: "https://res.cloudinary.com/dpdhfrk2t/image/upload/v1751103062/goa_de0fp2.jpg",
     pdfUrl: "/MP-holidays-Goa.pdf",
     link: "https://www.instagram.com/reel/DIOdJ4wpZii/?igsh=b3p1NXduaGs2ZXhv",
   },
-  
 ];
+
 {/* Image + Link Data */}
 const celebrationData = [
   {
@@ -128,23 +132,26 @@ const CardItem = ({ pkg }) => (
     <div className="p-4">
       <h3 className="text-lg font-bold text-[#302d00] mb-2 font-mai">{pkg.title}</h3>
       <p className="text-sm text-[#7c7a69] mb-3 font-cui">{pkg.description}</p>
+      
       <div className="aspect-video mb-3">
-            <video
-  src={pkg.videoUrl}
-  controls
-  playsInline
-  preload="metadata"
-  className="w-full h-full object-cover rounded bg-black"
-/>
+        <video
+          src={pkg.videoUrl}
+          poster={pkg.poster}  // ✅ Poster added here
+          controls
+          playsInline
+          preload="metadata"
+          className="w-full h-full object-cover rounded bg-black"
+        />
       </div>
+
       <a
-  href={pkg.pdfUrl}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-[#fef3c7] text-[#4a3f00] px-3 py-1 rounded text-sm font-medium hover:bg-[#fde68a] transition font-mai"
->
-  Download Package PDF
-</a>
+        href={pkg.pdfUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#fef3c7] text-[#4a3f00] px-3 py-1 rounded text-sm font-medium hover:bg-[#fde68a] transition font-mai"
+      >
+        Download Package PDF
+      </a>
 
       <a
         href={pkg.link}
@@ -157,6 +164,7 @@ const CardItem = ({ pkg }) => (
     </div>
   </div>
 );
+
 
 
 const Services = () => {
@@ -173,7 +181,7 @@ const Services = () => {
   return (
     <section
   id="services"
-  className="py-20 md:py-28 px-4 md:px-10 bg-gray-50 text-center font-['Open_Sans']"
+  className="py-20 md:py-28 px-4 md:px-10 text-center font-['Open_Sans']"
 >
   <div className="max-w-6xl mx-auto space-y-8">
     <h2 className="text-4xl md:text-5xl font-bold text-[#fecc00] font-mui">
@@ -196,21 +204,26 @@ const Services = () => {
         >
          {services.map((service, index) => (
   <SwiperSlide key={index}>
-    <div className="relative rounded-xl overflow-hidden shadow-md group transition-all duration-500">
-      {/* Image */}
-      <img
-        src={service.image}
-        alt={service.title}
-        className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-      />
+   <div className="relative rounded-xl overflow-hidden shadow-md group transition-all duration-500">
+  {/* Image */}
+  <img
+    src={service.image}
+    alt={service.title}
+    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+  />
 
-      {/* Overlay (default dark, becomes gradient on hover) */}
-      <div className="absolute inset-0 bg-black/30 group-hover:bg-gradient-to-tr group-hover:from-[#fecc00]/80 group-hover:to-[#ffb347]/90 transition-all duration-500 flex items-center justify-center">
-        <h3 className="text-xl font-semibold text-white group-hover:text-black text-center px-4 font-mai drop-shadow-[0_4px_6px_rgba(0,0,0,0.7)] group-hover:drop-shadow-none transition-all duration-500">
-          {service.title}
-        </h3>
-      </div>
-    </div>
+  {/* ✨ Overlay with better text readability */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-[#fecc00]/20 to-transparent z-10 flex items-center justify-center px-4 py-2">
+<h3 className="text-xl md:text-2xl font-bold text-white text-center font-mai px-4 py-2 bg-[#fecc00]/25 rounded-md shadow-md">
+  {service.title}
+</h3>
+
+
+
+
+  </div>
+</div>
+
   </SwiperSlide>
 ))}
 
@@ -229,7 +242,7 @@ const Services = () => {
 
         <div className="block md:hidden font-mui">
           <Swiper
-            autoplay={{ delay: 12000, disableOnInteraction: false }}
+            autoplay={{ delay: 7000, disableOnInteraction: false }}
             spaceBetween={20}
             slidesPerView={1}
             navigation
